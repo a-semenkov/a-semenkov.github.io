@@ -33,7 +33,7 @@ const zip = require("gulp-zip");
 const rootFolder = path.basename(path.resolve());
 
 const srcFolder = "./src";
-const buildFolder = "./dist";
+const buildFolder = "./docs";
 const paths = {
   pug: `${srcFolder}/pug/*.pug`,
   pugComponents: `${srcFolder}/pug/**/*.pug`,
