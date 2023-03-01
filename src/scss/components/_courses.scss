@@ -1,0 +1,42 @@
+.courses {
+  padding-bottom: 5rem;
+  &__content {
+    display: flex;
+  }
+
+  &__block {
+    flex-basis: calc(50% - 3rem);
+
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+
+  &__block--text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    color: var(--light-color);
+  }
+
+  &__block--media {
+    position: relative;
+
+    &-icon {
+      position: absolute;
+      top: -5rem;
+      left: 12rem;
+
+      width: 17rem;
+      height: 17rem;
+      background-image: url("../img/learning.svg");
+      @include bg-cover;
+    }
+  }
+
+  &__text {
+    margin: 0;
+  }
+}

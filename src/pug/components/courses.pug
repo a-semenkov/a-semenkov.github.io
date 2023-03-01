@@ -1,0 +1,25 @@
+-
+  let headerCourses = {heading: 'Обучение и', headingHighlight: ' консультации', subheading: 'Дополнительно', customClass:'courses'}
+
+  let coursesText = ['Обучаю веб-разработке с нуля, консультирую по направлениям развития, курсам и программам обучения.',
+    'Помогу выбрать направление обучения и стратегию заработка в профессии, в том числе, на фрилансе и биржах.',
+    'Занимаюсь репититорством с нуля по HTML, верстке, разработке на JavaScript, React,  NodeJS, PHP.',
+    'Разрабатываю индивидуальные программы обучения по книгам или видео-курсам, в зависимости от требований и пожеланий обучаемого.',
+    'Помогу с код-ревью, ошибками и оптимизацией в ваших проектах.',
+    'Подскажу best-practices в верстке, разработке и настройке серверов.',
+  ]
+
+
+section.courses#education
+  .container
+    +sectionHeader(headerCourses)
+    .courses__content
+      .courses__block.courses__block--media
+        .courses__block--media-icon
+        picture
+          source(srcset="/img/skype.avif" type="image/avif")
+          source(srcset="/img/skype.webp" type="image/webp")
+          img(loading="lazy" src="/img/skype.jpg" class="courses__img" width="" height="" alt='Skype дистанционные занятия по веб-разработке')
+      .courses__block.courses__block--text
+        each par in coursesText
+          p.courses__text #{par}

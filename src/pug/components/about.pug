@@ -1,0 +1,30 @@
+-
+  let advantagesText = [
+    {selected: 'Работаю по договору:', main:' составляем и утверждаем договор, учитывая ваши требования и возможности'},
+    {selected: 'Разрабатываю проекты “под ключ”:', main:' от прототипа до запуска'},
+    {selected: 'Выполняю обязанности руководителя проекта:', main:' поиск,  коммуникацию и контроль дополнительных специалистов - дизайнеров, копирайтеров, SEO - беру на себя'},
+    {selected: 'Есть сработанная команда:', main:' дизайнер и другие профильные специалисты уже в моей команде'},
+    {selected: 'Предлагаю гибкие условия работы:', main:' оплата по этапам, фиксированные сроки и гарантии '},
+    {selected: 'Знаю полный цикл веб-разработки:', main:' предусматриваю все сопутствующие мелочи - от оптимизации изображений до адаптации для SEO'},
+    {selected: 'Работаю с наиболее популярными и проверенными технологиями:', main:' после запуска вы легко сможете масштабировать или дорабатывать ваш проект у любого другого специалиста без моего участия'},
+    {selected: 'Слежу за отчетностью и не пропадаю:', main:' использую task-треккеры, JIRA, Canban и другие инструменты оперативного контроля хода выполнения работ'},
+    ]
+
+  let aboutText = '15+ лет работаю в IT: от фриланса и коммерческой веб-разработки до управления проектами b2b. В свободное время занимаюсь обучением и консультированием. Работал в стартапах, учавствовал в прототипировании и запуске проектов с нуля.'
+  let headerAbout = {heading: 'Почему', headingHighlight: ' я', subheading: 'Обо мне', customClass:'about'}
+
+section.about#about
+  +sectionHeader(headerAbout)
+  .about__content
+    .content__left
+      picture.content__foto
+        source(srcset="img/andrey-semenkov-web-developer.avif" type="image/avif")
+        source(srcset="img/andrey-semenkov-web-developer.webp" type="image/webp")
+        img(loading="lazy" src="img/andrey-semenkov-web-developer.png" class="image" width="300" height="400" alt="Андрей Семенков FrontEnd разработчик")
+      .content__about-text #{aboutText}
+    .content__right
+      ul.content__advantages.list-reset
+        each element in advantagesText
+          li.advantages__item
+            span.item__heading #{element.selected}
+            span.item__main #{element.main}

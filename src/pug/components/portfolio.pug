@@ -1,0 +1,32 @@
+-
+  let projects = [
+    {url: 'landing', name: 'Лендинги и многостраничные сайты', details: 'Верстка, Frontend, Backend, управление проектом'},
+    {url: 'CRM', name: 'CRM для управления продажами', details: 'Управление проектом, Верстка, FrontEnd, Backend, QA'},
+    {url: 'rememberMe', name: 'Веб-приложение фото-дневник ', details: 'Прототип, дизайн, Frontend + Google Firebase, deploy'},
+    {url: 'components', name: 'Компонент для оплаты кредитной картой', details: 'Верстка, FrontEnd'},
+    {url: 'banking', name: 'Веб-приложение система банкинга и торговли криптовалютой', details: 'Верстка, FrontEnd'},
+
+  ]
+  let headerPortfolio = {heading: 'Ключевые', headingHighlight: ' Проекты', subheading: 'Портфолио', customClass:'portfolio'}
+
+section.portfolio#portfolio
+  .container
+    +sectionHeader(headerPortfolio)
+  .portfolio__bg
+  .swiper-portfolio
+    .swiper-wrapper
+      each project in projects
+        .swiper-slide
+          .slide__wrapper
+            a(href=`#${project.url}` class='slide__link')
+            .project__backdrop
+              .project__name #{project.name}
+              .project__details #{project.details}
+              div( class='project__read-more') Подробнее о проекте
+                svg.read-more__arrow
+                  use(xlink:href="img/sprite.svg#arrow-right-link")
+            img(class='project__preview' src=`img/portfolio/${project.url}.jpg`)
+
+
+
+

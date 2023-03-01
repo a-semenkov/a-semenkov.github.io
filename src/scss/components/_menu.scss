@@ -1,0 +1,25 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 2rem 0;
+  z-index: 20;
+}
+
+.header__menu {
+  display: flex;
+}
+
+.menu__item {
+  @include mr(2rem);
+  color: var(--light-color);
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}

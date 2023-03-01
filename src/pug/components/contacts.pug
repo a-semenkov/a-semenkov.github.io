@@ -1,0 +1,14 @@
+-
+  let headerContacts = {heading: 'Свяжитесь со', headingHighlight: ' мной', subheading: 'Контакты', customClass:'contacts'}
+
+
+section.contacts#contacts
+  .container
+    +sectionHeader(headerContacts)
+    .contacts__icons
+      a(href="mailto:asemenkov@gmail.com" class="icon__link" target='_blank' title='Написать на почту')
+        img(loading="lazy" src="./img/mail.svg" class="tg-icon"  alt='Skype дистанционные занятия по веб-разработке')
+      a(href="https://t.me/asemenkov" class="icon__link" target='_blank' title='Написать в Telegram')
+        img(loading="lazy" src="./img/tg.svg" class="mail-icon"  alt='Skype дистанционные занятия по веб-разработке')
+
+    .contacts__sprite

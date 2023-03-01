@@ -1,0 +1,15 @@
+:root {
+  // base
+  --font-family: "Nunito", sans-serif;
+  --content-width: 1170px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --primary-color: #ffb403;
+  --secondary-color: #31313b;
+  --secondary-color-rgb: 49, 49, 59;
+  --bg-color: #121528;
+  --btn-color: #f2672e;
+  --light-color: #fff;
+}

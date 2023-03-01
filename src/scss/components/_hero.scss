@@ -1,0 +1,161 @@
+.hero {
+  position: relative;
+  padding-top: 7rem;
+  padding-bottom: 11rem;
+  height: 100vh;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    @include image-set("../img/hero-large1");
+    @include bg-cover;
+    background-position: bottom;
+
+    &--sprite {
+      background-image: url("../img/hero-stroke.svg");
+      @include bg-cover;
+
+      background-position: bottom;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 65rem;
+      height: 100%;
+    }
+  }
+}
+
+.hero-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero__sprite {
+  position: absolute;
+
+  @include bg-cover;
+  width: 51rem;
+  height: 51rem;
+  &.sprite-1 {
+    @include image-set-png("/img/glass-ring");
+    bottom: 35%;
+    right: 71%;
+  }
+  &.sprite-2 {
+    @include image-set-png("/img/cart");
+    width: 41rem;
+    height: 41rem;
+    right: 69%;
+    top: 62%;
+  }
+  &.sprite-3 {
+    @include image-set-png("/img/keyboard");
+    width: 30rem;
+    height: 30rem;
+    right: 0;
+    bottom: 79%;
+    z-index: 2;
+  }
+  &.sprite-4 {
+    @include image-set-png("/img/macbook");
+    right: 31%;
+  }
+}
+
+.hero__block {
+  @include flex-all-sb;
+  height: 50rem;
+  padding: 0 5rem;
+  max-width: 100%;
+  margin: 4rem auto;
+  border: 0.1rem solid rgba(255, 180, 3, 0.4);
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  z-index: 20;
+}
+
+.hero__text {
+  flex-grow: 1;
+}
+
+.block__part {
+  position: relative;
+  flex-basis: 50%;
+  height: 100%;
+}
+.hero__header {
+  margin-top: 8rem;
+  color: var(--light-color);
+}
+.header__name {
+  display: block;
+  font-size: 4.8rem;
+}
+.header__name--secondary-color {
+  color: var(--btn-color);
+}
+.header__prof {
+  font-size: 3.3rem;
+}
+.hero__subheader {
+  margin-top: 1.9rem;
+  color: var(--light-color);
+  font-weight: 400;
+  font-size: 2rem;
+}
+.contact__button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  background-color: var(--btn-color);
+  font-size: 1.6rem;
+  width: 18rem;
+  height: 5rem;
+  color: var(--light-color);
+  fill: currentColor;
+  transition: color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+  & svg {
+    margin-left: 1.2rem;
+    vertical-align: bottom;
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0);
+    color: var(--btn-color);
+    box-shadow: inset 0 0 0 3px var(--btn-color);
+  }
+
+  &:active {
+    color: white;
+  }
+}
+
+.hero__image {
+  flex-basis: 46rem;
+  @include image-set-png("/img/person");
+  @include bg-cover;
+
+  height: 100%;
+}
+.hero__contacts {
+}
+.contact__item {
+}
+.TG {
+}
+
+.mail {
+}

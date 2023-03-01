@@ -1,0 +1,23 @@
+-
+  let services = [
+    {icon: 'layout', header: 'Верстка', main: 'Верстка любой сложности - от Landing page до многостраничных сайтов'},
+    {icon: 'design', header: 'Дизайн', main: 'Дизайн мобильных и полноэкранных сайтов и приложений в Figma'},
+    {icon: 'turnkey', header: 'Сайт "под ключ"', main: 'Разработка, настройка и оптимизация с нуля до первых клиентов'},
+    {icon: 'spa', header: 'SPA и веб-приложения', main: 'Разработка одностраничных и сложных веб-приложений'},
+    {icon: 'mobile-app', header: 'Мобильные приложения', main: 'Разработка приложений для iOS и Android на ReactNative'},
+    {icon: 'backend', header: 'Backend', main: 'Разработка серверов и backend для работы с базами данных '},
+    {icon: 'component', header: 'Разработка компонентов', main: 'На чистом JavaScript, TypeScript или фреймворках '},
+  ]
+  let headerServices = {heading: 'Мои', headingHighlight: ' услуги', subheading: 'Что я предлагаю', customClass:'services'}
+
+section.services#services
+  .container.services__container
+    +sectionHeader(headerServices)
+    .services__sprite
+    ul.services__grid.list-reset
+      each service, index in services
+        li(class="services__card card"+ index)
+          svg.card__icon
+            use(xlink:href='/img/sprite.svg#' + service.icon)
+          .card__header #{service.header}
+          .card__body #{service.main}

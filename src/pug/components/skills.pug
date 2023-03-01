@@ -1,0 +1,33 @@
+-
+  let skills = [
+    {name: 'html', alt: 'HTML5 logo', ru: 'HTML 5'},
+    {name: 'css', alt: 'CSS3 logo', ru: 'CSS 3'},
+    {name: 'js', alt: 'JavaScript logo', ru: 'JavaScript ES6+'},
+    {name: 'react', alt: 'ReactJS logo', ru: 'React, Preact, ReactNative'},
+    {name: 'nextjs', alt: 'NextJS logo', ru: 'NextJS'},
+    {name: 'php', alt: 'PHP logo', ru: 'PHP'},
+    {name: 'laravel', alt: 'Laravel logo', ru: 'Laravel'},
+    {name: 'webpack', alt: 'Webpack logo', ru: 'Webpack'},
+    {name: 'node', alt: 'NodeJS logo', ru: 'NodeJS'},
+    {name: 'Express', alt: 'Express logo', ru: 'Express'},
+    {name: 'mysql', alt: 'MySQL logo', ru: 'MySQL'},
+    {name: 'mongodb', alt: 'MongoDB logo', ru: 'MongoDB'},
+    {name: 'pug', alt: 'Pug logo', ru: 'Pug'},
+    {name: 'scss', alt: 'SCSS logo', ru: 'SCSS'},
+    {name: 'babel', alt: 'Babel logo', ru: 'Babel'},
+    {name: 'git', alt: 'Git logo', ru: 'git'},
+  ]
+  let headerSkills = {heading: 'Что я', headingHighlight: ' использую', subheading: 'Навыки', customClass:'skills'}
+
+section.skills
+  .container
+    +sectionHeader(headerSkills)
+  .swiper-skills.skills-slider
+    .swiper-wrapper
+      each skill in skills
+        .swiper-slide
+          .backdrop
+            .title #{skill.ru}
+          img(loading='lazy' src='img/' + skill.name + '.svg' class='skills__svg' width='100' height='100' alt=skill.alt)
+
+

@@ -1,0 +1,98 @@
+.services {
+  position: relative;
+  cursor: default;
+  &__sprite {
+    position: absolute;
+    background-image: url("../img/services-stroke.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 124rem;
+    height: 100%;
+  }
+
+  &__container {
+    position: relative;
+    overflow: visible;
+  }
+
+  &__svg-brush {
+    position: absolute;
+    width: 100%;
+    height: 100rem;
+    top: -56px;
+
+    background-image: url("../img/brush-stroke.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+
+.services__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, 70px);
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  gap: 3rem;
+  z-index: 2;
+
+  @include small-tablet {
+    grid-template-columns: repeat(8, 40px);
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(8, 25px);
+  }
+}
+.services__card {
+  padding: 1rem;
+
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  color: var(--light-color);
+
+  grid-column-end: span 2;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+    .card__icon {
+      fill: var(--light-color);
+    }
+  }
+}
+
+.card4 {
+  grid-column-start: 2;
+}
+.card5 {
+  grid-column-start: 4;
+}
+.card6 {
+  grid-column-start: 6;
+}
+
+.card__icon {
+  width: 5rem;
+  height: 5rem;
+  @include bg-cover;
+  fill: var(--primary-color);
+  transition: fill 0.3s ease-in-out;
+}
+
+.card__header {
+  margin-top: 2rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.card__body {
+  margin-top: 0.5rem;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
