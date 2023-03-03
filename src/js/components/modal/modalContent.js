@@ -32,7 +32,7 @@ export const MODAL_CONTENT = [
     },
   },
   {
-    name: "CRM",
+    name: "crm",
     header: "CRM-система для управления продажами",
     body: {
       scope: [
